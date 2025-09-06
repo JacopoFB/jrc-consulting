@@ -1,0 +1,27 @@
+.action-btn {
+    background: #0077ff;
+    /* main accent color */
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    /* pill shape */
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 119, 255, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+}
+
+.action-btn:hover {
+    background: #005ecc;
+    box-shadow: 0 6px 16px rgba(0, 119, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 119, 255, 0.2);
+}
