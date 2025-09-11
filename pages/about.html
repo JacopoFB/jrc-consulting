@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <title>About Joo Ree</title>
+</head>
+<body class="flex-rows h100VH">
+    <section class="flex-grow">
+        <nav id="nav">
+            <a href="./about.html">About</a>
+            <a href="./services.html">Services</a>
+            <a href="./testimonials.html">Testimonials</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="flex-rows page-section margin-center">
+            <div class="logo mleft25 flex-cols flex-center-justify" id="logo">
+                <img src="../images/jrc-logo.webp">
+            </div>
+        </div>
+    </section>
+    <div class="flex-grow page-img"></div>
+</body>
+<style>
+
+.page-img {
+    width: 40%;
+    max-width: 900px;
+
+    background-image: url('../images/about-img.jpg');
+    background-size: cover;
+    background-position: left 50% bottom 0%;
+}
+
+.logo {
+    width: 175px;
+    display: block;
+    aspect-ratio: 1 / 1;
+}
+.logo img {
+    width: 100%;
+    box-sizing: content-box;
+    filter: saturate(1.8);
+    object-fit: contain;
+    display: block;
+}
+.page-section {
+    width: 95%;
+    max-width: 1000px;
+    background-color: red;
+}
+</style>
+</html>
