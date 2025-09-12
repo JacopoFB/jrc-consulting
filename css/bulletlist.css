@@ -1,0 +1,72 @@
+.bullet-list {
+    list-style-type: none;
+}
+
+.bullet-item {
+    margin-bottom: 15px;
+    border-left: 4px solid #ffd700;
+    
+    border-radius: 0 8px 8px 0;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bullet-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bullet-header {
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bullet-icon {
+    color: #ffd700;
+    font-size: 24px;
+    margin-right: 15px;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.bullet-title {
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+.bullet-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.bullet-content-inner {
+    padding: 20px;
+    border-top: 1px dashed #ffd700;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.bullet-item.active .bullet-content {
+    max-height: 300px;
+    padding: 0 20px;
+}
+
+.bullet-item.active .bullet-icon {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.arrow {
+    margin-left: auto;
+    color: #ffd700;
+    transition: transform 0.3s ease;
+}
+
+.bullet-item.active .arrow {
+    transform: rotate(90deg);
+}

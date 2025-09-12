@@ -5,7 +5,7 @@
     --primary-color: #e5d2ae;
     --accent-color: #9362cb;
 
-    --accent-txt: #4c237b;
+    --accent-txt: #2d115c;
     --dark-txt: rgb(16, 16, 16);
     --light-txt: rgb(246, 246, 246);
 }
@@ -46,6 +46,7 @@ h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
 .light-txt { color: var(--light-txt); }
 
 .t-center { text-align: center; }
+.t-justify { text-align: justify; }
 
 .t45 { font-size: 45px; }
 .t40 { font-size: 40px; }
@@ -60,6 +61,8 @@ h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
 
 .para {
     line-height: 1.7em;
+    letter-spacing: 0.25px;
+    color: var(--dark-txt);
 }
 
 /* Positional Utils */
@@ -85,9 +88,11 @@ h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
 .margin-center { margin: 0 auto; }
 .margin-full-auto { margin: auto; }
 .mtop5 { margin-top: 5px; }
+.mtop15 { margin-top: 15px; }
 .mtop25 { margin-top: 25px; }
 .mtop35 { margin-top: 35px; }
 .mtop50 { margin-top: 50px; }
+.mtop100 { margin-top: 100px; }
 
 .mbottom25 { margin-bottom: 25px; }
 .mtop25 { margin-top: 25px; }
@@ -96,6 +101,7 @@ h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
 .mleft50 { margin-left: 50px; }
 
 /* MISC */
+.saturate { filter: saturate(1.8); }
 .debug { background-color: red; }
 .debug2 { background-color: blue; }
 

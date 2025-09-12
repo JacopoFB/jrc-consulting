@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../css/nav.css">
     <title>About Joo Ree</title>
 </head>
+
 <body class="flex-rows h100VH">
     <section class="flex-grow">
         <nav id="nav">
@@ -15,41 +17,65 @@
             <a href="./testimonials.html">Testimonials</a>
             <a href="./contact.html">Contact</a>
         </nav>
-        <div class="flex-rows page-section margin-center">
-            <div class="logo mleft25 flex-cols flex-center-justify" id="logo">
-                <img src="../images/jrc-logo.webp">
+        <div class="flex-rows page-section margin-center mtop50">
+            <div class="logo flex-cols flex-center-justify" id="logo">
+                <img src="../images/jrc-logo.webp" class="saturate">
+            </div>
+            <div class="flex-cols mleft25">
+                <h1 class="t-normal t40 ls1 t-bold" id="title">Joo Ree Chu</h1>
+                <h3 class="t-normal t20 mtop5 ls1" id="subtitle">A Valuable Partner In Your Childs Success</h3>
+
+                <p class="para mtop50 t-justify">
+                    Joo Ree Chu is a School Psychologist with experience as a school administrator. Her professional
+                    expertise provides a strong foundation for offering unique support services as an educational
+                    consultant.<br><br>
+
+                    Joo Ree has over a decade of experience in both public and private school settings where she worked
+                    extensively with children, caregivers, teachers, and administrators to design and implement tailored
+                    programs to meet the unique needs of individual students. Joo Ree holds degrees from Carleton
+                    College (B.A., Psychology), University of Minnesota (Ed.S., School Psychological Services) and
+                    University of Colorado - Denver (Ed.S., Leadership for Educational Organization). Joo Ree’s passion
+                    for creating equitable learning environments drives her work with families and schools.<br><br>
+
+                    Joo Ree is dedicated to enhancing the well-being of children and their caregivers through thoughtful
+                    advocacy, personalized support, and a deep understanding of the complex challenges faced by
+                    neurodivergent students. She is the proud mother of two daughters, one of whom is twice exceptional.
+                </p>
             </div>
         </div>
     </section>
     <div class="flex-grow page-img"></div>
 </body>
 <style>
+    .page-img {
+        width: 40%;
+        max-width: 900px;
 
-.page-img {
-    width: 40%;
-    max-width: 900px;
+        background-image: url('../images/about-img.jpg');
+        background-size: cover;
+        background-position: left 50% bottom 0%;
+    }
 
-    background-image: url('../images/about-img.jpg');
-    background-size: cover;
-    background-position: left 50% bottom 0%;
-}
+    .logo {
+        width: 125px;
+        min-width: 125px;
+        display: block;
+        aspect-ratio: 1 / 1;
+    }
 
-.logo {
-    width: 175px;
-    display: block;
-    aspect-ratio: 1 / 1;
-}
-.logo img {
-    width: 100%;
-    box-sizing: content-box;
-    filter: saturate(1.8);
-    object-fit: contain;
-    display: block;
-}
-.page-section {
-    width: 95%;
-    max-width: 1000px;
-    background-color: red;
-}
+    .logo img {
+        width: 100%;
+        box-sizing: content-box;
+        object-fit: contain;
+        display: block;
+    }
+
+    .page-section {
+        width: 95%;
+        max-width: 1000px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 </style>
+
 </html>
