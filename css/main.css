@@ -6,7 +6,7 @@
     --accent-color: #9362cb;
 
     --accent-txt: #2d115c;
-    --dark-txt: rgb(16, 16, 16);
+    --dark-txt: #2c3e50;;
     --light-txt: rgb(246, 246, 246);
 }
 
@@ -97,8 +97,11 @@ h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
 .mbottom25 { margin-bottom: 25px; }
 .mtop25 { margin-top: 25px; }
 
+.mleft15 { margin-left: 15px; }
 .mleft25 { margin-left: 25px; }
 .mleft50 { margin-left: 50px; }
+
+.mright10 { margin-right: 10px; }
 
 /* MISC */
 .saturate { filter: saturate(1.8); }
