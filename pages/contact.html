@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <title>Contact</title>
+</head>
+
+<body class="flex-rows h100VH">
+    <section class="flex-grow">
+        <nav id="nav">
+            <a href="./about.html">About</a>
+            <a href="./services.html">Services</a>
+            <a href="./testimonials.html">Testimonials</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="flex-rows page-section margin-center mtop50" id="content-container">
+            <div class="logo flex-cols flex-center-justify" id="logo">
+                <img src="../images/jrc-logo.webp" class="saturate">
+            </div>
+            <div class="flex-cols mleft15 mright10 mtop35 flex-grow">
+                <h1 class="t-normal t40 ls1 t-bold" id="title">Work With Me</h1>
+
+                <input placeholder="Your Email..." class="text-input mtop50 mbottom25">
+                <textarea placeholder="Message..." class="text-input mbottom25"></textarea>
+                <button class="purple-btn mtop25" style="width: 150px;">Send</button>
+            </div>
+        </div>
+    </section>
+    <div class="flex-grow page-img" id="page-img"></div>
+</body>
+<style>
+
+.page-img {
+    width: 25%;
+    max-width: 900px;
+
+    background-image: url('../images/about-img.jpg');
+    background-size: cover;
+    background-position: left 50% bottom 0%;
+}
+
+.logo {
+    width: 125px;
+    min-width: 125px;
+    display: block;
+    aspect-ratio: 1 / 1;
+}
+
+.logo img {
+    width: 100%;
+    box-sizing: content-box;
+    object-fit: contain;
+    display: block;
+}
+
+.page-section {
+    width: 95%;
+    max-width: 1000px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* text inputs */
+.text-input {
+    background-color: rgb(243, 243, 243);
+    box-shadow: 6px 6px 3px rgba(0,0,0,0.15);
+    padding: 15px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    resize: none;
+}
+input { width: 275px; }
+textarea { min-height: 250px; }
+
+/* dymanic resizing */
+@media screen and (max-width: 1150px) {
+    #page-img { display: none; }   
+}
+
+@media screen and (max-width: 700px) {
+    #content-container { flex-direction: column; }   
+}
+
+</style>
+
+</html>

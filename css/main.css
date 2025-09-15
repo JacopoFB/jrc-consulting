@@ -103,6 +103,23 @@ h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
 
 .mright10 { margin-right: 10px; }
 
+/* BUTTONS */
+.purple-btn {
+    background-color: #4d3b6b;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    display: inline-block;
+    padding: 10px
+
+}
+.purple-btn:hover {
+    background-color: #392c50;
+    cursor: pointer;
+}
+
 /* MISC */
 .saturate { filter: saturate(1.8); }
 .debug { background-color: red; }
