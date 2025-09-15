@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600&family=Merriweather:wght@700&display=swap');
+
 
 /* color palatte */
 :root {
@@ -13,11 +19,61 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'DM Sans', sans-serif;
     box-sizing: border-box;
 }
 body { background-color: var(--primary-color); }
 h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
+
+/* fonts */
+/* OPTION 1 */ /*
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+body, p, li {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+*/
+/* OPTION 2 */ 
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+body, p, li, input, textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+/* OPTION 3 */ /*
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+body, p, li {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+*/
+/* OPTION 4 */ /*
+body, h1, h2, h3, p, li {
+  font-family: 'Inter', sans-serif;
+}
+*/
+/* OPTION 5 */ /*
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+
+body, p, li {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+*/
 
 /* Width Utils */
 .w40 { width: 40%; }
@@ -95,6 +151,7 @@ h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
 .mtop100 { margin-top: 100px; }
 
 .mbottom25 { margin-bottom: 25px; }
+.mbottom100 { margin-bottom: 100px; }
 .mtop25 { margin-top: 25px; }
 
 .mleft15 { margin-left: 15px; }
@@ -122,6 +179,7 @@ h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
 
 /* MISC */
 .saturate { filter: saturate(1.8); }
+.gutter-scroll { scrollbar-gutter: stable; }
 .debug { background-color: red; }
 .debug2 { background-color: blue; }
 

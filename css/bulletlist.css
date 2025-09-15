@@ -1,72 +1,69 @@
 .bullet-list {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
 }
 
 .bullet-item {
-    margin-bottom: 15px;
-    border-left: 4px solid #ffb700;
-    
-    border-radius: 0 8px 8px 0;
+    margin-bottom: 12px;
+    border-radius: 6px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: box-shadow 0.3s;
 }
 
 .bullet-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .bullet-header {
-    padding: 15px 20px;
-    cursor: pointer;
     display: flex;
     align-items: center;
-    position: relative;
+    cursor: pointer;
+    padding: 14px 18px;
+    background: #e9e3d7;
 }
 
-.bullet-icon {
-    color: #ffd700;
-    font-size: 24px;
-    margin-right: 15px;
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+.bullet-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #f1c40f;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
 }
 
 .bullet-title {
-    font-size: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #2c3e50;
+}
+
+.arrow {
+    margin-left: auto;
+    color: #f1c40f;
+    transition: transform 0.3s ease;
+    font-size: 25px;
 }
 
 .bullet-content {
     max-height: 0;
     overflow: hidden;
-    padding: 0 20px;
-    transition: max-height 0.5s ease, padding 0.5s ease;
-}
-
-.bullet-content-inner {
-    padding: 20px;
-    border-top: 1px dashed #ffd700;
+    background: #e9e3d7;
     color: #555;
-    line-height: 1.6;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0 18px;
+    transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
 .bullet-item.active .bullet-content {
-    max-height: 300px;
-    padding: 0 20px;
-}
-
-.bullet-item.active .bullet-icon {
-    transform: rotate(90deg);
-    transition: transform 0.3s ease;
-}
-
-.arrow {
-    margin-left: auto;
-    color: #ffd700;
-    transition: transform 0.3s ease;
+    max-height: 200px;
+    padding: 14px 18px;
 }
 
 .bullet-item.active .arrow {
     transform: rotate(90deg);
+}
+
+.bullet-item.active .bullet-dot {
+    transform: scale(1.3);
 }
