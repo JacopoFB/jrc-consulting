@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/nav.css">
     <title>JRC Partnerships</title>
 </head>
 <body class="flex-cols h100VH">
     <header class="flex-rows p15">
         <div class="logo mleft25 flex-cols flex-center-justify" id="logo">
-            <img src="../images/jrc-logo.webp" class="saturate">
+            <img src="./images/jrc-logo.webp" class="saturate">
         </div>
         <div class="flex-cols mleft25 mtop35" id="title-container">
             <h1 class="t-normal t45 ls1" id="title">Joo Ree Chu</h1>
@@ -20,18 +20,60 @@
     <div class="relative banner">
         <p class="absolute pos-topleft light-txt p25 t22 mleft50 mtop50" id="quote">A Valuable Partner In Your Child's Success</p>
     </div>
+    <div 
+        class="overlay" 
+        id="burger-menu-overlay"
+        onclick="document.getElementById('burger-menu-overlay').classList.remove('active')"
+    >
+        <div id="burger-menu" onclick="event.stopPropagation()">
+            <div>
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="35" height="35" viewBox="0 0 24 24" 
+                    fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    onclick="document.getElementById('burger-menu-overlay').classList.remove('active')"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M18 6l-12 12" />
+                    <path d="M6 6l12 12" />
+                </svg>
+            </div>  
+
+            <div class="flex-cols" id="burger-links">
+                <a href="./about.html">About</a>
+                <a href="./services.html">Services</a>
+                <a href="./testimonials.html">Testimonials</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
     <nav id="nav">
         <a href="./about.html">About</a>
         <a href="./services.html">Services</a>
         <a href="./testimonials.html">Testimonials</a>
         <a href="./contact.html">Contact</a>
+
+        <!-- Icon to open burger menu -->
+        <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="35" height="35" 
+            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            id="open-burger-menu-icon"
+            onclick="document.getElementById('burger-menu-overlay').classList.add('active')"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 8l16 0" />
+            <path d="M4 16l16 0" />
+        </svg>
     </nav>
 </body>
 <style>
 
 .banner {
     flex-grow: 1;
-    background-image: url('../images/landing-banner-hires.jpg');
+    background-image: url('./images/landing-banner-hires.jpg');
     background-size: cover;
     background-position: left 0% top 15%;
 }
@@ -76,10 +118,6 @@
     .banner {
         background-position: left 65% top 15%;
     }
-}
-@media screen and (max-width: 700px) {
-    #nav { display: none; }
-    #nav-burger { display: block; }
 }
 
 </style>

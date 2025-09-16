@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <title>Contact</title>
+</head>
+
+<body class="flex-rows h100VH">
+    <section class="flex-grow">
+        <div 
+            class="overlay" 
+            id="burger-menu-overlay"
+            onclick="document.getElementById('burger-menu-overlay').classList.remove('active')"
+        >
+            <div id="burger-menu" onclick="event.stopPropagation()">
+                <div>
+                    <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        width="35" height="35" viewBox="0 0 24 24" 
+                        fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        onclick="document.getElementById('burger-menu-overlay').classList.remove('active')"
+                    >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </div>  
+
+                <div class="flex-cols" id="burger-links">
+                    <a href="./about.html">About</a>
+                    <a href="./services.html">Services</a>
+                    <a href="./testimonials.html">Testimonials</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        <nav id="nav">
+            <a href="./about.html">About</a>
+            <a href="./services.html">Services</a>
+            <a href="./testimonials.html">Testimonials</a>
+            <a href="./contact.html">Contact</a>
+
+            <!-- Icon to open burger menu -->
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="35" height="35" 
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                id="open-burger-menu-icon"
+                onclick="document.getElementById('burger-menu-overlay').classList.add('active')"
+            >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 8l16 0" />
+                <path d="M4 16l16 0" />
+            </svg>
+        </nav>
+        <div class="flex-rows page-section margin-center mtop50" id="content-container">
+            <div onclick="window.location.href='index.html'" class="logo flex-cols flex-center-justify" id="logo">
+                <img src="./images/jrc-logo.webp" class="saturate">
+            </div>
+            <div class="flex-cols mright10 mtop35 flex-grow container">
+                <h1 class="t-normal t40 ls1 t-bold" id="title">Work With Me</h1>
+
+                <input placeholder="Your Email..." class="text-input mtop50 mbottom25">
+                <textarea placeholder="Message..." class="text-input mbottom25"></textarea>
+                <button class="purple-btn mtop15" style="width: 150px;">Send</button>
+            </div>
+        </div>
+    </section>
+    <div class="flex-grow page-img" id="page-img"></div>
+</body>
+<style>
+
+.page-img {
+    width: 15%;
+    max-width: 900px;
+
+    background-image: url('./images/about-img.jpg');
+    background-size: cover;
+    background-position: left 50% bottom 0%;
+}
+
+.container { margin-left: 25px; }
+
+.logo {
+    width: 125px;
+    min-width: 125px;
+    display: block;
+    aspect-ratio: 1 / 1;
+}
+
+.logo img {
+    width: 100%;
+    box-sizing: content-box;
+    object-fit: contain;
+    display: block;
+}
+
+.page-section {
+    width: 95%;
+    max-width: 1000px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* text inputs */
+.text-input {
+    background-color: var(--secondary-color);
+    box-shadow: 6px 6px 3px rgba(0,0,0,0.15);
+    padding: 15px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    resize: none;
+}
+input { width: 275px; }
+textarea { min-height: 250px; }
+
+/* dymanic resizing */
+@media screen and (max-width: 1150px) {
+    #page-img { display: none; }   
+}
+
+@media screen and (max-width: 700px) {
+    #content-container { flex-direction: column; }  
+    .container { margin-left: 0px; } 
+}
+
+</style>
+
+</html>

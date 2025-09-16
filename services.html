@@ -4,25 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/bulletlist.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/bulletlist.css">
     <title>About Joo Ree</title>
 </head>
 
 <body class="flex-rows h100VH">
     <section class="flex-grow gutter-scroll" style="overflow-y: auto;">
+        <div 
+            class="overlay" 
+            id="burger-menu-overlay"
+            onclick="document.getElementById('burger-menu-overlay').classList.remove('active')"
+        >
+            <div id="burger-menu" onclick="event.stopPropagation()">
+                <div>
+                    <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        width="35" height="35" viewBox="0 0 24 24" 
+                        fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        onclick="document.getElementById('burger-menu-overlay').classList.remove('active')"
+                    >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </div>  
+
+                <div class="flex-cols" id="burger-links">
+                    <a href="./about.html">About</a>
+                    <a href="./services.html">Services</a>
+                    <a href="./testimonials.html">Testimonials</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
         <nav id="nav">
             <a href="./about.html">About</a>
             <a href="./services.html">Services</a>
             <a href="./testimonials.html">Testimonials</a>
             <a href="./contact.html">Contact</a>
+
+            <!-- Icon to open burger menu -->
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="35" height="35" 
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                id="open-burger-menu-icon"
+                onclick="document.getElementById('burger-menu-overlay').classList.add('active')"
+            >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 8l16 0" />
+                <path d="M4 16l16 0" />
+            </svg>
         </nav>
         <div class="flex-rows page-section margin-center mtop50" id="content-container">
             <div onclick="window.location.href='index.html'" class="logo flex-cols flex-center-justify" id="logo">
-                <img src="../images/jrc-logo.webp" class="saturate">
+                <img src="./images/jrc-logo.webp" class="saturate">
             </div>
-            <div class="flex-cols mleft25">
+            <div class="flex-cols container">
                 <h1 class="t-normal t40 ls1 t-bold mtop35" id="title">Services</h1>
                 <h3 class="t-normal t20 mtop50 ls1" id="subtitle">Services I Provide</h3>
 
@@ -177,10 +219,12 @@
     width: 25%;
     max-width: 900px;
 
-    background-image: url('../images/about-img.jpg');
+    background-image: url('./images/about-img.jpg');
     background-size: cover;
     background-position: left 50% bottom 0%;
 }
+
+.container { margin-left: 25px; }
 
 .logo {
     width: 125px;
@@ -209,7 +253,8 @@
 }
 
 @media screen and (max-width: 700px) {
-    #content-container { flex-direction: column; }   
+    #content-container { flex-direction: column; } 
+    .container { margin-left: 0px; }  
 }
 
 </style>
