@@ -112,6 +112,8 @@ body, p, li {
 .t22 { font-size: 22px; }
 .t20 { font-size: 20px; }
 .t18 { font-size: 18px; }
+.t14 { font-size: 14px; }
+.t12 { font-size: 12px; }
 
 .ls1 { letter-spacing: 1px; }
 .ls2 { letter-spacing: 2px; }
@@ -152,6 +154,7 @@ body, p, li {
 .mtop100 { margin-top: 100px; }
 
 .mbottom25 { margin-bottom: 25px; }
+.mbottom50 { margin-bottom: 50px; }
 .mbottom100 { margin-bottom: 100px; }
 .mtop25 { margin-top: 25px; }
 
