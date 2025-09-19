@@ -10,7 +10,7 @@
 </head>
 
 <body class="flex-rows h100VH">
-    <section class="flex-grow">
+    <section class="flex-grow" style="overflow-y: auto;">
         <div 
             class="overlay" 
             id="burger-menu-overlay"
@@ -35,7 +35,7 @@
                     <a href="./about.html">About</a>
                     <a href="./services.html">Services</a>
                     <a href="./testimonials.html">Testimonials</a>
-                    <a href="./contact.html">Contact</a>
+                    <a href="./contact.html" class="selected">Contact</a>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
             <a href="./about.html">About</a>
             <a href="./services.html">Services</a>
             <a href="./testimonials.html">Testimonials</a>
-            <a href="./contact.html">Contact</a>
+            <a href="./contact.html" class="selected">Contact</a>
 
             <!-- Icon to open burger menu -->
             <svg 
@@ -66,21 +66,51 @@
             <div class="flex-cols mright10 mtop35 flex-grow container">
                 <h1 class="t-normal t40 ls1 t-bold" id="title">Work With Me</h1>
 
-                <input placeholder="Your Email..." class="text-input mtop50 mbottom25">
-                <textarea placeholder="Message..." class="text-input mbottom25"></textarea>
-                <button class="purple-btn mtop15" style="width: 150px;">Send</button>
+                <p class="mtop25 para t-italic">
+                    Joo Ree offers a free 20-minute consultation for all new clients. 
+                    Please submit your request using this Inquiry Form</a>.
+                </p>
+
+                <input placeholder="Full Name..." class="text-input mtop50 mbottom25">
+                <input 
+                    placeholder="Email..." 
+                    type="email"
+                    class="text-input mbottom25"
+                >
+                <input 
+                    placeholder="Phone number..." 
+                    maxlength="14" 
+                    class="text-input mbottom25" 
+                    id="phone-number"
+                >
+                <textarea 
+                    placeholder="Describe your need for support..." 
+                    class="text-input mbottom25"
+                ></textarea>
+                <textarea 
+                    placeholder="How did you hear about JRC Partnerships?..." 
+                    class="text-input mbottom25"
+                    style="min-height: 100px !important;"
+                ></textarea>
+                <button class="purple-btn mtop15 mbottom100" style="width: 150px;">Send</button>
             </div>
         </div>
     </section>
     <div class="flex-grow page-img" id="page-img"></div>
 </body>
+
+<script src="./scripts/phoneNumberField.js"></script>
+<script>
+    attachPhoneFormatter("#phone-number");
+</script>
+
 <style>
 
 .page-img {
     width: 15%;
     max-width: 900px;
 
-    background-image: url('./images/about-img.jpg');
+    background-image: url('./images/about-img-compressed.jpg');
     background-size: cover;
     background-position: left 50% bottom 0%;
 }
