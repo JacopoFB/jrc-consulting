@@ -1,66 +1,83 @@
 .testimonials-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin: 40px 0;
-  padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
 }
 
 .testimonial {
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  font-size: 1rem;
-  line-height: 1.6;
-  transition: transform 0.3s, box-shadow 0.3s;
-  overflow: hidden;
-  position: relative;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonial:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    /*transform: translateY(-4px);*/
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial .quote {
-  max-height: 4.8em; /* ~3 lines */
-  overflow: hidden;
-  transition: max-height 0.4s ease;
+    max-height: 4.8em;
+    /* ~3 lines */
+    overflow: hidden;
+    transition: max-height 0.4s ease;
 }
 
 .testimonial.expanded .quote {
-  max-height: 1000px; /* enough to show all text */
+    max-height: 1000px;
+    /* enough to show all text */
 }
 
 .testimonial .author {
-  font-weight: 600;
-  color: #555;
-  font-size: 0.95rem;
-  margin-top: 12px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95rem;
+    margin-top: 12px;
 }
 
 .read-more {
-  background: none;
-  border: none;
-  color: #3498db;
-  cursor: pointer;
-  margin-top: 8px;
-  font-size: 0.9rem;
-  padding: 0;
-  transition: color 0.2s;
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0;
+    transition: color 0.2s;
+    margin-bottom: 15px;
 }
 
 .read-more:hover {
-  color: #216f9a;
+    color: #216f9a;
 }
 
 /* Variants */
 .testimonial.parent {
-  background: #fff8e6;
-  border-left: 5px solid #f1c40f;
+    background: #fff8e6;
+    border-left: 5px solid #f1c40f;
 }
 
 .testimonial.professional {
-  background: #f9f9f9;
-  border-top: 4px solid #3498db;
+    background: #fff8e6;
+    border-top: 4px solid #3498db;
 }
+
+.testimonials-section {
+    margin: 30px 0;
+}
+
+.testimonial-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-txt);
+    padding-bottom: 6px;
+    border-bottom: 2px solid #fff;
+    opacity: 0.9;
+}
+

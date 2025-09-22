@@ -21,9 +21,31 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    scrollbar-width: thin;
+    scrollbar-color: #ba9a5e var(--secondary-color);
 }
 body { background-color: var(--primary-color); }
 h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #ba9a5e;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+    border: 2px solid #ba9a5e;
+    /* creates spacing effect */
+    transition: background 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ba9a5e;
+}
 
 /* fonts */
 /* OPTION 1 */ /*
@@ -123,6 +145,12 @@ body, p, li {
     line-height: 1.7em;
     letter-spacing: 0.25px;
     color: var(--dark-txt);
+}
+.section-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 0;
+    border-bottom: 2px solid #eee;
 }
 
 /* Positional Utils */
