@@ -8,7 +8,7 @@
 
 /* color palatte */
 :root {
-    --primary-color: #e5d2ae;
+    --primary-color: #ece3d1; 
     --secondary-color: #e9e3d7;
     --accent-color: #9362cb;
 
@@ -27,6 +27,17 @@
 }
 body { background-color: var(--primary-color); }
 h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
+
+/* logo */
+.logo img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+    /* slight scale up */
+}
 
 /* custom scrollbar */
 ::-webkit-scrollbar {

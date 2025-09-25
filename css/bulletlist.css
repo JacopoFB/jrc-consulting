@@ -19,7 +19,7 @@
     align-items: center;
     cursor: pointer;
     padding: 14px 18px;
-    background: #e9e3d7;
+    background: #e2ceaa;
 }
 
 .bullet-dot {
@@ -47,7 +47,7 @@
 .bullet-content {
     max-height: 0;
     overflow: hidden;
-    background: #e9e3d7;
+    background: #e2ceaa;
     color: #555;
     font-size: 0.95rem;
     line-height: 1.5;
