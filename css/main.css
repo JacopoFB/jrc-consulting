@@ -1,14 +1,6 @@
-/*@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600&family=Merriweather:wght@700&display=swap');
-
-
 /* color palatte */
 :root {
-    --primary-color: #ece3d1; 
+    --primary-color: #eae2f3; 
     --secondary-color: #e9e3d7;
     --accent-color: #9362cb;
 
@@ -59,18 +51,6 @@ h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
 }
 
 /* fonts */
-/* OPTION 1 */ /*
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-
-body, p, li {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-}
-*/
-/* OPTION 2 */ 
 h1, h2, h3, h4, h5 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -80,34 +60,6 @@ body, p, li, input, textarea {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 }
-
-/* OPTION 3 */ /*
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-}
-
-body, p, li {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-}
-*/
-/* OPTION 4 */ /*
-body, h1, h2, h3, p, li {
-  font-family: 'Inter', sans-serif;
-}
-*/
-/* OPTION 5 */ /*
-h1, h2, h3 {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-}
-
-body, p, li {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-}
-*/
 
 /* Width Utils */
 .w40 { width: 40%; }
@@ -187,12 +139,14 @@ body, p, li {
 .margin-center { margin: 0 auto; }
 .margin-full-auto { margin: auto; }
 .mtop5 { margin-top: 5px; }
+.mtop10 { margin-top: 10px; }
 .mtop15 { margin-top: 15px; }
 .mtop25 { margin-top: 25px; }
 .mtop35 { margin-top: 35px; }
 .mtop50 { margin-top: 50px; }
 .mtop100 { margin-top: 100px; }
 
+.mbottom5 { margin-bottom: 5px; }
 .mbottom25 { margin-bottom: 25px; }
 .mbottom50 { margin-bottom: 50px; }
 .mbottom100 { margin-bottom: 100px; }
@@ -203,6 +157,7 @@ body, p, li {
 .mleft50 { margin-left: 50px; }
 
 .mright10 { margin-right: 10px; }
+.mright50 { margin-right: 50px; }
 
 /* BUTTONS */
 .purple-btn {

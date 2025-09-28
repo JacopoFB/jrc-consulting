@@ -63,7 +63,7 @@
             <div onclick="window.location.href='index.html'" class="logo flex-cols flex-center-justify" id="logo">
                 <img src="./images/jrc-logo.png" class="saturate">
             </div>
-            <div class="flex-cols mright10 mtop35 flex-grow container">
+            <div class="flex-cols mtop35 flex-grow container">
                 <h1 class="t-normal t40 ls1 t-bold" id="title">Work With Me</h1>
 
                 <p class="mtop25 para t-italic">
@@ -119,7 +119,10 @@ section {
     width: 70%;
 }
 
-.container { margin-left: 25px; }
+.container { 
+    margin-left: 25px; 
+    margin-right: 50px;
+}
 
 .logo {
     width: 125px;
@@ -144,7 +147,7 @@ section {
 
 /* text inputs */
 .text-input {
-    background-color: #eeebe5;
+    background-color: #eeedef;
     box-shadow: 6px 6px 3px rgba(0,0,0,0.15);
     padding: 15px;
     font-size: 16px;
@@ -162,7 +165,10 @@ textarea { min-height: 250px; }
 
 @media screen and (max-width: 700px) {
     #content-container { flex-direction: column; }  
-    .container { margin-left: 0px; } 
+    .container { 
+        margin-left: 0px;
+        margin-right: 0; 
+    } 
 }
 
 </style>

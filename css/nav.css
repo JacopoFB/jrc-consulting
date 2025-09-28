@@ -35,6 +35,10 @@ nav a {
     display: inline-block;
     letter-spacing: 1px;
     transition: transform 0.2s ease, color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3px;
 }
 
 nav a:hover {
