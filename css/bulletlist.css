@@ -25,6 +25,7 @@
 .bullet-dot {
     width: 14px;
     height: 14px;
+    min-width: 14px;
     border-radius: 50%;
     background-color: #f1c40f;
     margin-right: 12px;
