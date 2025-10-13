@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/nav.css">
     <title>Contact</title>
+
+    <!-- emailjs service -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body class="flex-rows h100VH">
@@ -71,11 +74,12 @@
                     Please submit your request using this Inquiry Form</a>.
                 </p>
 
-                <input placeholder="Full Name..." class="text-input mtop50 mbottom25">
+                <input placeholder="Full Name..." class="text-input mtop50 mbottom25" id="fullname">
                 <input 
                     placeholder="Email..." 
                     type="email"
                     class="text-input mbottom25"
+                    id="email"
                 >
                 <input 
                     placeholder="Phone number..." 
@@ -86,13 +90,15 @@
                 <textarea 
                     placeholder="Describe your need for support..." 
                     class="text-input mbottom25"
+                    id="need"
                 ></textarea>
                 <textarea 
                     placeholder="How did you hear about JRC Partnerships?..." 
                     class="text-input mbottom25"
                     style="min-height: 100px !important;"
+                    id="how"
                 ></textarea>
-                <button class="purple-btn mtop15 mbottom100" style="width: 150px;">Send</button>
+                <button class="purple-btn mtop15 mbottom100" style="width: 150px;" onclick="sendInquiry()">Send</button>
             </div>
         </div>
     </section>
@@ -102,6 +108,53 @@
 <script src="./scripts/phoneNumberField.js"></script>
 <script>
     attachPhoneFormatter("#phone-number");
+
+    function sendInquiry() {
+        const fullname = document.getElementById('fullname');        
+        const email = document.getElementById('email');        
+        const phone = document.getElementById('phone-number');        
+        const need = document.getElementById('need');        
+        const how = document.getElementById('how'); 
+        
+        // Basic input validation
+        if (!fullname.value.trim() || 
+            !email.value.trim() || 
+            !phone.value.trim() || 
+            !need.value.trim() || 
+            !how.value.trim()) {
+            alert("Please fill out all required fields before submitting.");
+            return; // Stop execution
+        }
+        
+        const publicKey = "znh6Lgwlg3oqicPmn";
+        const serviceId = "service_i3utfne";
+        const templateId = "template_4v9qj0c";
+
+        emailjs.init(publicKey);
+        
+        const inputFields = {
+            name: fullname.value,
+            email: email.value,
+            phone: phone.value,
+            need: need.value,
+            how: how.value
+        };
+
+        // send inquiry
+        emailjs.send(serviceId, templateId, inputFields)
+            .then(() => {
+                alert("message has been sent!");
+
+                // clear input fields
+                fullname.value = "";
+                email.value = "";
+                phone.value = "";
+                need.value = "";
+                how.value = "";
+            }, (error) => {
+                alert("Something went wrong sending inquiry")
+            });
+    }
 </script>
 
 <style>
