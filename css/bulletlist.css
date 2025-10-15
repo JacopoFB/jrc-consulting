@@ -48,6 +48,7 @@
 
 .bullet-content {
     max-height: 0;
+    overflow: auto;
     overflow: hidden;
     background: #efebf3;
     color: #555;
@@ -58,7 +59,7 @@
 }
 
 .bullet-item.active .bullet-content {
-    max-height: 200px;
+    max-height: 1000px;
     padding: 14px 18px;
 }
 
