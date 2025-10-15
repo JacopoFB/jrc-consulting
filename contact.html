@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/popup.css">
     <title>Contact</title>
 
     <!-- emailjs service -->
@@ -13,6 +14,22 @@
 </head>
 
 <body class="flex-rows h100VH">
+    <div class="overlay" id="confirmation-popup-overlay">
+        <div class="popup" id="confirmation-popup">
+            <div class="popup-icon">✓</div>
+            <h3>Inquiry Sent!</h3>
+            <p>Thank you for your message. We've received your inquiry and will get back to you within 2-3 business days.</p>
+            <button 
+                class="popup-button" 
+                onclick="
+                    document.getElementById('confirmation-popup-overlay').classList.remove('active')
+                "
+            >
+                Got It
+            </button>
+        </div>
+    </div>
+
     <section class="flex-grow" style="overflow-y: auto;">
         <div 
             class="overlay" 
@@ -122,7 +139,8 @@
             !phone.value.trim() || 
             !need.value.trim() || 
             !how.value.trim()) {
-            alert("Please fill out all required fields before submitting.");
+                
+            alert("Please fill out all the fields.")
             return; // Stop execution
         }
         
@@ -143,14 +161,15 @@
         // send inquiry
         emailjs.send(serviceId, templateId, inputFields)
             .then(() => {
-                alert("message has been sent!");
-
                 // clear input fields
                 fullname.value = "";
                 email.value = "";
                 phone.value = "";
                 need.value = "";
                 how.value = "";
+
+                // show popup
+                document.getElementById('confirmation-popup-overlay').classList.add('active')
             }, (error) => {
                 alert("Something went wrong sending inquiry")
             });
