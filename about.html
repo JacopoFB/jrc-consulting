@@ -82,6 +82,12 @@
                     different cultures and educational systems to broaden her professional perspective. JRC Partnerships is honored to
                     redistribute 10% of all service fees to community-serving organizations in the U.S. and overseas.<br><br>
                 </p>
+
+                <div class="KGSA-container">
+                    <img src="./images/KGSA_1.jpg" style="margin-right: 5px">
+                    <img src="./images/KGSA_2.jpg">
+                </div>
+
                 <hr class="mtop25">
 
                 <h3 class="t-normal t20 mtop25 mbottom50 ls1" id="subtitle">Education & Work Experience</h3>
@@ -112,10 +118,19 @@
                 <h4 class="t-normal ls1">Colorado Psychology Association Racial Justice Task Force</h4>
 
                 <hr class="mtop50">
+                <!--
                 <p class="mtop25 mbottom100 para">
                     Joo Ree offers a free 20-minute consultation for all new clients. 
                     Please submit your request using the <a href="./contact.html">Inquiry Form</a>.
                 </p>
+                -->
+                <a 
+                    href="./contact.html" 
+                    class="purple-btn mtop50 mbottom50 margin-center flex-cols flex-center-justify" 
+                    style="width: 300px; border-radius: 5px; height: 50px;"
+                >
+                    Get in Touch
+                </a>
             </div>
         </div>
     </section>
@@ -162,6 +177,15 @@ section {
     padding-right: 25px;
 }
 
+.KGSA-container {
+    display: flex;
+}
+.KGSA-container img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 /* dymanic resizing */
 @media screen and (max-width: 1150px) {
     #page-img { display: none; }   
@@ -172,6 +196,13 @@ section {
     .container { 
         margin-left: 0px;
         margin-right: 0;
+    }
+    .KGSA-container {
+        flex-direction: column;
+    }
+    .KGSA-container img {
+        margin: 0px 0px 10px 0px;
+        width: 100%;
     }
 }
 
