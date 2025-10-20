@@ -18,7 +18,7 @@
         <div class="popup" id="confirmation-popup">
             <div class="popup-icon">✓</div>
             <h3>Inquiry Sent!</h3>
-            <p>Thank you for your message. We've received your inquiry and will get back to you within 2-3 business days.</p>
+            <p>Thank you for your message. I have received your inquiry and will get back to you within 2-3 business days.</p>
             <button 
                 class="popup-button" 
                 onclick="
@@ -115,7 +115,80 @@
                     style="min-height: 100px !important;"
                     id="how"
                 ></textarea>
-                <button class="purple-btn mtop15 mbottom100" style="width: 150px;" onclick="sendInquiry()">Send</button>
+
+                <button class="purple-btn mtop15 mbottom100" id="send-inquiry" style="width: 150px;" onclick="sendInquiry()">Send</button>
+
+                <!-- LOADING GIF WHEN SEND IS PRESSED -->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="43px"
+                    height="43px"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="xMidYMid"
+                    id="loading"
+                >
+                    <g transform="rotate(0 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                    <g transform="rotate(30 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.8333333333333334s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                    <g transform="rotate(60 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.75s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                    <g transform="rotate(90 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.6666666666666666s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                    <g transform="rotate(120 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5833333333333334s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                    <g transform="rotate(150 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                    <g transform="rotate(180 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.4166666666666667s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                    <g transform="rotate(210 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.3333333333333333s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                    <g transform="rotate(240 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.25s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                    <g transform="rotate(270 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.16666666666666666s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                    <g transform="rotate(300 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.08333333333333333s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                    <g transform="rotate(330 50 50)">
+                        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b2650f">
+                            <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite" />
+                        </rect>
+                    </g>
+                </svg>
             </div>
         </div>
     </section>
@@ -159,6 +232,11 @@
             reply_to: email.value   // <-- sets the Reply-To header
         };
 
+        
+        // set loading gif
+        document.getElementById('send-inquiry').style.display = "none";
+        document.getElementById('loading').style.display = "block";
+
         // send inquiry
         emailjs.send(serviceId, templateId, inputFields)
             .then(() => {
@@ -170,14 +248,23 @@
                 how.value = "";
 
                 // show popup
-                document.getElementById('confirmation-popup-overlay').classList.add('active')
+                document.getElementById('confirmation-popup-overlay').classList.add('active');
             }, (error) => {
-                alert("Something went wrong sending inquiry")
+                alert("Something went wrong sending inquiry");
+            })
+            .finally(() => {
+                document.getElementById('send-inquiry').style.display = "block";
+                document.getElementById('loading').style.display = "none";
             });
     }
 </script>
 
 <style>
+
+#loading { 
+    display: none;
+    margin-bottom: 100px; 
+}
 
 .page-img {
     width: 30%;
