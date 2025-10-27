@@ -30,6 +30,9 @@
     overflow: hidden;
     transition: max-height 0.4s ease;
 }
+.testimonial .quote span {
+    font-weight: bold;
+}
 
 .testimonial.expanded .quote {
     max-height: 1000px;
@@ -37,7 +40,7 @@
 }
 
 .testimonial .author {
-    font-weight: 600;
+    font-weight: normal;
     color: #555;
     font-size: 0.95rem;
     margin-top: 12px;
