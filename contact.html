@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./css/popup.css">
     <title>Contact</title>
 
+    <!-- font -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- emailjs service -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
@@ -52,32 +55,34 @@
                 </div>  
 
                 <div class="flex-cols" id="burger-links">
-                    <a href="./about.html">About</a>
-                    <a href="./services.html">Services</a>
-                    <a href="./testimonials.html">Testimonials</a>
-                    <a href="./contact.html" class="selected">Contact</a>
+                    <a href="./index.html">Home</a>
+                    <a href="./index.html#about">About</a>
+                    <a href="./index.html#services">Services</a>
+                    <a href="./index.html#testimonials">Testimonials</a>
                 </div>
             </div>
         </div>
         <nav id="nav">
-            <a href="./about.html">About</a>
-            <a href="./services.html">Services</a>
-            <a href="./testimonials.html">Testimonials</a>
-            <a href="./contact.html" class="selected">Contact</a>
+            <a href="./index.html">Home</a>
+            <a href="./index.html#about">About</a>
+            <a href="./index.html#services">Services</a>
+            <a href="./index.html#testimonials">Testimonials</a>
 
             <!-- Icon to open burger menu -->
-            <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="35" height="35" 
-                viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                id="open-burger-menu-icon"
-                onclick="document.getElementById('burger-menu-overlay').classList.add('active')"
-            >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M4 8l16 0" />
-                <path d="M4 16l16 0" />
-            </svg>
+            <div class="flex-cols flex-center-justify">
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="35" height="35" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    id="open-burger-menu-icon-top"
+                    onclick="document.getElementById('burger-menu-overlay').classList.add('active')"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 8l16 0" />
+                    <path d="M4 16l16 0" />
+                </svg>
+            </div>
         </nav>
         <div class="flex-rows page-section margin-center mtop50" id="content-container">
             <div onclick="window.location.href='index.html'" class="logo flex-cols flex-center-justify" id="logo">
@@ -270,7 +275,7 @@
     width: 30%;
     max-width: 900px;
 
-    background-image: url('./images/banner5.jpg');
+    background-image: url('./images/banner2.jpg');
     background-size: cover;
     background-position: left 50% bottom 0%;
 }

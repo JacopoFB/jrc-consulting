@@ -4,43 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="./css/bulletlist.css">
+    <link rel="stylesheet" href="./css/testimonials.css">
     <link rel="stylesheet" href="./css/nav.css">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <title>JRC Partnerships</title>
 </head>
-<body class="flex-cols h100VH">
-    <header class="flex-rows p15">
-        <div class="logo mleft25 flex-cols flex-center-justify" id="logo">
-            <img src="./images/jrc-logo.png" class="saturate">
-        </div>
-        <div class="flex-cols mleft25 mtop35" id="title-container">
-            <h1 class="t-normal t45 ls1" id="title">Joo Ree Chu, Ed.S.</h1>
-            <h3 
-                class="t-normal t22 ls1 mtop10" id="subtitle"
-                style="line-height: 1.2em;"
-            >
-                Educational Consulting Services <br>From An Experienced School Psychologist
-            </h3>
-        </div>
-        <div class="flex-grow"></div>
-        <div class="flex-cols flex-center-justify">
-            <!-- Icon to open burger menu -->
-            <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="35" height="35" 
-                viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                id="open-burger-menu-icon"
-                onclick="document.getElementById('burger-menu-overlay').classList.add('active')"
-            >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M4 8l16 0" />
-                <path d="M4 16l16 0" />
-            </svg>
-        </div>
-    </header>
-    <div class="relative banner">
-        <p class="absolute pos-topleft light-txt p25 t22 mleft50 mtop50" id="quote">A Valuable Partner In Your Child's Success</p>
-    </div>
+<body class="flex-cols">
+    <!-- OVERLAYS -->
     <div 
         class="overlay" 
         id="burger-menu-overlay"
@@ -62,70 +37,463 @@
             </div>  
 
             <div class="flex-cols" id="burger-links">
-                <a href="./about.html">About</a>
-                <a href="./services.html">Services</a>
-                <a href="./testimonials.html">Testimonials</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
                 <a href="./contact.html">Contact</a>
             </div>
         </div>
     </div>
+
+    <div class="flex-cols" style="height: calc(100vh - 90px)">
+        <header class="flex-rows p15">
+            <div class="logo mleft25 flex-cols flex-center-justify" id="logo">
+                <img src="./images/jrc-logo.png" class="saturate">
+            </div>
+            <div class="flex-cols mleft25 mtop35" id="title-container">
+                <h1 class="t-normal t45 ls1" id="title">Joo Ree Chu, Ed.S.</h1>
+                <h3 
+                    class="t-normal t22 ls1 mtop10" id="subtitle"
+                    style="line-height: 1.2em;"
+                >
+                    Educational Consulting Services <br>From An Experienced School Psychologist
+                </h3>
+            </div>
+            <div class="flex-grow"></div>
+            <div class="flex-cols flex-center-justify">
+                <!-- Icon to open burger menu -->
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="35" height="35" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    id="open-burger-menu-icon-top"
+                    onclick="document.getElementById('burger-menu-overlay').classList.add('active')"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 8l16 0" />
+                    <path d="M4 16l16 0" />
+                </svg>
+            </div>
+        </header>
+        <div class="relative banner">
+            <p class="absolute pos-topleft light-txt p25 t22 mleft50 mtop50" id="quote">A Valuable Partner In Your Child's Success</p>
+        </div>
+    </div>
     <nav id="nav">
-        <a href="./about.html">About</a>
-        <a href="./services.html">Services</a>
-        <a href="./testimonials.html">Testimonials</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="./contact.html">Contact</a>
+
+        <!-- Icon to open burger menu -->
+        <div class="flex-cols flex-center-justify" id="open-burger-menu-icon-header-container">
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="35" height="35" 
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                id="open-burger-menu-icon-header"
+                onclick="document.getElementById('burger-menu-overlay').classList.add('active')"
+            >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 8l16 0" />
+                <path d="M4 16l16 0" />
+            </svg>
+        </div>
     </nav>
+
+    <!-- ABOUT SECTION -->
+    <div class="flex-rows page-section margin-center mtop50" id="about">
+        <div class="flex-cols mtop15 container">
+            <h1 class="t-normal t40 ls1 t-bold" id="title">Joo Ree Chu</h1>
+            <h3 class="t-normal t20 mtop15 ls1" id="subtitle">Empowering families and educators to help every student thrive</h3>
+
+            <p class="para mtop50">
+                Joo Ree Chu is a School Psychologist with a wide breadth of professional experience. For over a decade she has worked in
+                both public and private school settings to support children, their caregivers, teachers, and school leadership. She
+                believes every parent is the expert of their child and wants the best for them. When it comes to educational matters,
+                Joo Ree is committed to partnering with families to guide and support them through uncertainty and setbacks. Her work is
+                driven by the principle that supportive and equitable learning environments result in better outcomes for all.
+                <br><br>
+
+                Joo Ree is the proud mother of two children who have attended both public and private schools. She understands the
+                trials and tribulations of parenthood and what it means to take life one day (sometimes one hour!) at a time. She is a
+                lifelong dancer, swimmer, and enjoys finding respite in nature. Joo Ree also enjoys traveling abroad to learn about
+                different cultures and educational systems to broaden her professional perspective. JRC Partnerships is honored to
+                redistribute 10% of all service fees to community-serving organizations in the U.S. and overseas.<br><br>
+            </p>
+
+            <div class="KGSA-container">
+                <img src="./images/KGSA_1.jpg" style="margin-right: 5px">
+                <img src="./images/KGSA_2.jpg">
+            </div>
+            <p class="mtop25 t14">
+                Learning from student ambassadors at the <a href="https://kgsafoundation.org/">Kibera Girls Soccer Academy</a> in Nairobi
+            </p>
+
+            <h1 class="t-normal t40 ls1 t-bold mtop75 mbottom50" id="title">Education & Work Experience</h1>
+
+            <h4 class="t-normal ls1 mbottom5">B.A. Psychology</h4>
+            <p class="mbottom25 ls1 t14 t-italic">Carleton College</p>
+
+            <h4 class="t-normal ls1 mbottom5">Ed.S. School Psychological Services</h4>
+            <p class="mbottom25 ls1 t14 t-italic">University of Minnesota, Twin Cities</p>
+
+            <h4 class="t-normal ls1 mbottom5">Ed.S. Leadership For Educational Organizations</h4>
+            <p class="mbottom25 ls1 t14 t-italic">University of Colorado, Denver</p>
+
+            <h4 class="t-normal ls1 mbottom5">Wyatt Academy</h4>
+            <p class="mbottom25 ls1 t14 t-italic">Colorado Charter School</p>
+
+            <h4 class="t-normal ls1 mbottom5">Cherry Creek Schools</h4>
+            <p class="mbottom25 ls1 t14 t-italic">Colorado Public District</p>
+
+            <h4 class="t-normal ls1 mbottom5">Montessori School of Denver</h4>
+            <p class="mbottom25 ls1 t14 t-italic">Colorado Private School</p>
+
+            <h4 class="t-normal ls1 mbottom5">Osseo Area Schools</h4>
+            <p class="mbottom25 ls1 t14 t-italic">Minnesota Public District</p>
+
+            <h4 class="t-normal ls1 mbottom25">Colorado Diversity Network of ACIS Schools</h4>
+
+            <h4 class="t-normal ls1">Colorado Psychology Association Racial Justice Task Force</h4>
+
+            <!--
+            <p class="mtop25 mbottom100 para">
+                Joo Ree offers a free 20-minute consultation for all new clients. 
+                Please submit your request using the <a href="./contact.html">Inquiry Form</a>.
+            </p>
+            -->
+        </div>
+    </div>
+
+    <!-- SERVICE SECTION -->
+    <div class="flex-cols page-section margin-center" id="services">
+        <h1 class="t-normal t40 ls1 t-bold mtop75 mbottom25" id="title">Services</h1>
+
+        <ul class="bullet-list mtop25 mbottom25">
+            <li class="bullet-item">
+                <div class="bullet-header">
+                <span class="bullet-dot"></span>
+                <span class="bullet-title">Advocating for specialized school supports</span>
+                <span class="arrow">▸</span>
+                </div>
+                <div class="bullet-content">
+                    Assistance with understanding and advocating for your child's educational strengths and areas of growth, 
+                    as well as related specialized support services. This may include attending and pre/post meeting 
+                    strategizing for school meetings related to accommodation plans (504), Individualized Education 
+                    Programs (IEP), initial or triennial special education evaluations, and gifted services.
+                </div>
+            </li>
+
+            <li class="bullet-item">
+                <div class="bullet-header">
+                <span class="bullet-dot"></span>
+                <span class="bullet-title">Review and analysis of evaluations/interventions</span>
+                <span class="arrow">▸</span>
+                </div>
+                <div class="bullet-content">
+                    Comprehensive review and analysis of: <br><br>
+                        
+                    <strong>A.</strong> School records, standardized test scores, and supports provided within the general and/or special education 
+                    settings<br><br>
+                    <strong>B.</strong> External evaluations, specialized assessments, and support services
+                </div>
+            </li>
+
+            <li class="bullet-item">
+                <div class="bullet-header">
+                <span class="bullet-dot"></span>
+                <span class="bullet-title">Navigating school and/or district decisions and grievance procedures related to student support services</span>
+                <span class="arrow">▸</span>
+                </div>
+                <div class="bullet-content">
+                    Support with understanding, advocating for, and contesting matters within Special Education, Gifted Services, and ADA
+                    accommodations (e.g., evaluation request, grade retention or advancement, special circumstances).
+                </div>
+            </li>
+
+            <li class="bullet-item">
+                <div class="bullet-header">
+                <span class="bullet-dot"></span>
+                <span class="bullet-title">Direct observation and accommodation recommendations</span>
+                <span class="arrow">▸</span>
+                </div>
+                <div class="bullet-content">
+                    Direct observation in school and community settings plus recommendations for accommodations and 
+                    tools (e.g., executive functioning, adaptive skills, routines).
+                </div>
+            </li>
+
+            <li class="bullet-item">
+                <div class="bullet-header">
+                <span class="bullet-dot"></span>
+                <span class="bullet-title">Referral to external evaluation and support providers</span>
+                <span class="arrow">▸</span>
+                </div>
+                <div class="bullet-content">
+                    Referrals to evaluation clinics and support service providers 
+                    (e.g., psycho-educational evaluations, social-emotional/behavioral therapy, 
+                    speech services, occupational therapy, sensory processing therapy, academic 
+                    tutoring).
+                </div>
+            </li>
+
+            <li class="bullet-item">
+                <div class="bullet-header">
+                <span class="bullet-dot"></span>
+                <span class="bullet-title">Coordination of support providers across settings</span>
+                <span class="arrow">▸</span>
+                </div>
+                <div class="bullet-content">
+                    Support with coordinating and communicating with service providers across settings 
+                    (e.g., school, home, clinic, and court-ordered supports).
+                </div>
+            </li>
+
+            <li class="bullet-item">
+                <div class="bullet-header">
+                <span class="bullet-dot"></span>
+                <span class="bullet-title">School recommendations and admission assistance</span>
+                <span class="arrow">▸</span>
+                </div>
+                <div class="bullet-content">
+                    Recommendations for public and independent (private) schools, as well as support 
+                    related to admission procedures (e.g., attending campus visits; advocating for child's 
+                    unique strengths, areas of growth, and related supports needed; managing application 
+                    submission).
+                </div>
+            </li>
+
+            <li class="bullet-item">
+                <div class="bullet-header">
+                <span class="bullet-dot"></span>
+                <span class="bullet-title">Cognitive testing</span>
+                <span class="arrow">▸</span>
+                </div>
+                <div class="bullet-content">
+                    Standalone cognitive testing as needed for private school admission applications.
+                </div>
+            </li>
+        </ul>
+
+        <h3 class="t-normal t20 ls1 mtop50" id="subtitle">Pricing</h3>
+    
+        <p class="mtop25 para mbottom50">
+            JRC Partnerships offers a tiered pricing scale based on each family’s financial 
+            circumstances. Your tier will be determined prior to executing a service agreement.
+            A free 20-minute consultation is offered for all new clients. 
+            Please submit your request using the <a href="./contact.html">Inquiry Form</a>.
+        </p>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="flex-rows page-section margin-center" id="testimonials">
+        <div class="flex-cols mtop15 container">
+            <h1 class="t-normal t40 ls1 t-bold" id="title">Testimonials</h1>
+            <h3 class="t-normal t20 mtop15 ls1" id="subtitle">Words From Parents, Collaborators, and Others</h3>
+
+            <div class="testimonials-section">
+                <h2 class="testimonial-heading mtop25 pbottom50">Client Testimonials</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial parent">
+                        <p class="quote">
+                            “Gave us clarity with a very complex system”<br><br><br>
+
+                            “Joo Ree’s insights were invaluable while we were deciding
+                            if we should proceed with an ASD evaluation. She gave us so
+                            much clarity with a very complex system. She was compassionate,
+                            knowledgeable, and made a difficult and confusing time feel so
+                            much more feasible.”
+                        </p>
+                        <button class="read-more">Read more</button>
+                        <div class="author">— Christina, Private School Parent</div>
+                    </div>
+            
+                    <div class="testimonial parent">
+                        <p class="quote">
+                            “Gave us insight to navigate DPS with confidence”<br><br>
+                            “Meeting with Joo Ree was invaluable. Joo Ree gave us insight to navigate DPS’s Byzantine process with
+                            confidence. Joo
+                            Ree identified which buttons to push and what words to say. DPS evaluated our daughter shortly after
+                            meeting with her.
+                            Prior to meeting Joo Ree we spent months running around in circles, sending emails and leaving
+                            voicemails that were left
+                            unanswered. I wish we had connected with Joo Ree sooner!”
+                        </p>
+                        <button class="read-more">Read more</button>
+                        <div class="author">— Conor, Public School Parent</div>
+                    </div>
+            
+                    <div class="testimonial parent">
+                        <p class="quote">
+                            “Provided the ‘white glove’ treatment from beginning to end”<br><br>
+                            “JRC Partnerships provided comprehensive services to help determine the best school for my daughter’s
+                            Kindergarten year.
+                            From the initial consultation and questionnaire, I felt “held” and comforted knowing that Joo Ree would
+                            take the time to
+                            understand my daughter’s educational needs and also consider our family needs (e.g., commute, cost,
+                            preferences of
+                            public vs private school). She really seemed to “get” my daughter’s learning style and catered her
+                            search to schools
+                            that would be exactly right for her. Joo Ree’s preparedness and professionalism shone through to myself
+                            and to school
+                            staff. She attended every school tour and asked administration direct - sometimes hard - questions. They
+                            responded
+                            candidly, perhaps because they appreciated her demeanor and the research involved in knowing which
+                            questions to ask.
+                            <br><br>
+                            What I appreciated most about Joo Ree was her candor with me. She clearly stated her professional
+                            opinions, so that I
+                            could make informed decisions. She respected my feedback and my own instincts about what might be a good
+                            fit for our
+                            family. Joo Ree gently nudged me away from a school that I loved, but was not a match for my daughter’s
+                            learning style
+                            and needs. JRC Partnerships provided the “white glove” treatment from beginning to end, and we could not
+                            be happier with
+                            my daughter’s final placement!”
+                        </p>
+                        <button class="read-more">Read more</button>
+                        <div class="author">— Sarah, Private School Parent</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-section">
+                <h2 class="testimonial-heading">Professional Testimonials</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial professional">
+                        <p class="quote">
+                            “An incredible asset in this field”<br><br><br>
+
+                            I have had the absolute pleasure of working with Joo Ree since my 
+                            early days as a clinical psychologist. We first worked together 
+                            when she was the school psychologist at the Montessori School of 
+                            Denver, and I found her to be one of the most collaborative individuals 
+                            I came across in my work with various schools and providers. 
+                            <br><br>
+                            I always 
+                            appreciated Joo Ree's perspectives on students and the systems they 
+                            were in, and her efforts to enact change on multiple levels, not just 
+                            with the individual. She has a real gift of holding empathy and understanding 
+                            for challenging situations, but also guiding families and educators toward solutions. 
+                            When she shifted away from work in the schools, Joo Ree remained a wonderful 
+                            presence in my professional life. I have so much trust in her knowledge and lens, 
+                            and her passion for this work is evident in everything she undertakes. 
+                            <br><br>
+                            I'm excited for this next chapter in her professional journey, and see her as an incredible 
+                            asset in this field!
+                        </p>
+                        <button class="read-more">Read more</button>
+                        <div class="author">— Dr. Stephanie Miller, Birch Psychology</div>
+                    </div>
+
+                    <div class="testimonial professional">
+                        <p class="quote">
+                            “Enlightening and helpful”<br><br><br>
+
+                            “Through the years I have referred countless clients to JRC Partnerships
+                            and every single one of them has taken the time to come back to us and say
+                            that the experience was enlightening and helpful. Here are just a few examples
+                            of families I sent Joo Ree’s way:<br><br>
+            
+                            ● A family deciding whether to keep their child at the school they love or
+                            move him to a different school that could better accommodate his learning needs.<br><br>
+            
+                            ● A family that needed data to determine whether the current school placement
+                            was in fact honoring their IEP commitment.<br><br>
+            
+                            ● A family that received a thorough and well-written neuropsychological evaluation,
+                            but were still confused by the results and how the findings would impact their child
+                            on a day-to-day basis as well as at school. Joo Ree was able to break down the
+                            evaluation in an easy-to-understand format.<br><br>
+            
+                            ● A family that needed to pull their child from private school due to medical needs
+                            and needed input in how to manage curriculum while continuing his education through
+                            home-schooling.<br><br>
+                        </p>
+                        <button class="read-more">Read more</button>
+                        <div class="author">— Dr. Sarah Haider, Executive Director of GamePlan Therapy</div>
+                    </div>
+
+                    <div class="testimonial professional">
+                        <p class="quote">
+                            “Truly understands the needs of neurodiverse students”<br><br><br>
+
+                            I would highly recommend Joo Ree for your child's educational consulting needs. 
+                            As an experienced and highly trained school psychologist, Joo Ree truly understands 
+                            the needs of neurodiverse students and is able to quickly uncover what supports 
+                            they need both in and outside of school to perform their best. Joo Ree also has 
+                            in-depth knowledge of the school system, as well as private evaluation clinics in 
+                            the metro-Denver area, and knows how to collaborate effectively with multidisciplinary 
+                            teams. She is a wonderful resource for the community and a true leader in the field of 
+                            educational psychology.
+                        </p>
+                        <button class="read-more">Read more</button>
+                        <div class="author">— Dr. Courtney Tolinski, Director of Zarlengo Learning Evaluation Center</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-<style>
 
-.banner {
-    flex-grow: 1;
-    background-image: url('./images/landing-banner-hires-compressed.jpg');
-    background-size: cover;
-    background-position: left 0% top 15%;
-}
-.logo {
-    width: 175px;
-    display: block;
-    aspect-ratio: 1 / 1;
-}
-.logo img {
-    width: 100%;
-    box-sizing: content-box;
-    object-fit: contain;
-    display: block;
-}
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section logo-footer-section">
+            <div class="logo margin-center">
+                <img src="./images/jrc-logo.png" class="saturate" alt="Logo" class="contain">
+            </div>
+        </div>
 
-/* dymanic resizing */
-@media screen and (max-width: 1150px) {
-    #title { font-size: 35px; }
-    #subtitle { font-size: 18px; }
-    #nav a { font-size: 20px; }
-}
-@media screen and (max-width: 900px) {
-    #title-container { margin-top: 20px; }
-    #quote { font-size: 20px; }
-    #nav a { font-size: 16px; }
-}
-@media screen and (max-width: 750px) {
-    #logo { width: 75px; margin-left: 0px; }
-    #title { font-size: 25px; }
-    #title-container { 
-        margin-top: 0px; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center;
-    }
-    #subtitle { display: none; }
-    #quote { 
-        font-size: 20px; 
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-    .banner {
-        background-position: left 65% top 15%;
-    }
-}
+        <div class="footer-section">
+            <h4 class="t20 t-bold mtop10 mbottom5">Contact</h4>
+            <p>Get in contact using the <a href="./contact.html">inquiry form</a></p>
+        </div>
 
-</style>
+        <div class="footer-section">
+            <h4 class="t20 t-bold mtop10">Quick Links</h4>
+
+            <a href="#about" class="footer-link">About</a>
+            <a href="#services" class="footer-link">Services</a>
+            <a href="#testimonials" class="footer-link">Testimonials</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p class="t12 t-center">&copy; 2025 JRC Consulting. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+
+/* burger menu at top */
+window.addEventListener("scroll", () => {
+    if (window.scrollY === 0) {
+        document.getElementById("open-burger-menu-icon-header").style.display = "none";
+    } else {
+        document.getElementById("open-burger-menu-icon-header").style.display = "block";
+    }
+});
+
+/* bulletlist functioanlity */
+document.querySelectorAll('.bullet-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('active');
+    });
+});
+
+/* testimonials functionality */
+document.querySelectorAll('.read-more').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.closest('.testimonial');
+        card.classList.toggle('expanded');
+        btn.textContent = card.classList.contains('expanded') ? 'Read less' : 'Read more';
+    });
+});
+
+</script>
 </html>

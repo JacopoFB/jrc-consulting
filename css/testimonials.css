@@ -1,8 +1,9 @@
 .testimonials-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 20px;
     margin: 20px 0;
+    justify-content: center; /* centers the grid if fewer than 2 items */
 }
 
 .testimonial {
@@ -76,8 +77,8 @@
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--accent-txt);
-    padding-bottom: 6px;
-    border-bottom: 2px solid #fff;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--accent-txt);
     opacity: 0.9;
 }
 

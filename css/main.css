@@ -52,12 +52,12 @@ h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
 
 /* fonts */
 h1, h2, h3, h4, h5 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
 body, p, li, input, textarea {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
@@ -144,6 +144,7 @@ body, p, li, input, textarea {
 .mtop25 { margin-top: 25px; }
 .mtop35 { margin-top: 35px; }
 .mtop50 { margin-top: 50px; }
+.mtop75 { margin-top: 75px; }
 .mtop100 { margin-top: 100px; }
 
 .mbottom5 { margin-bottom: 5px; }
