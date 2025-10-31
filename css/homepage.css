@@ -27,6 +27,8 @@
     object-fit: cover;
     border-radius: 10px;
 }
+#KGSA-caption-mobile { display: none; }
+#KGSA-caption-desktop { display: inline-block; }
 
 /* Footer */
 .footer {
@@ -114,4 +116,6 @@
         margin: 0px 0px 10px 0px;
         width: 100%;
     }
+    #KGSA-caption-mobile { display: inline-block; }
+    #KGSA-caption-desktop { display: none; }
 }

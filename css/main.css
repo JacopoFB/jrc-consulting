@@ -148,7 +148,9 @@ body, p, li, input, textarea {
 .mtop100 { margin-top: 100px; }
 
 .mbottom5 { margin-bottom: 5px; }
+.mbottom15 { margin-bottom: 15px; }
 .mbottom25 { margin-bottom: 25px; }
+.mbottom35 { margin-bottom: 35px; }
 .mbottom50 { margin-bottom: 50px; }
 .mbottom100 { margin-bottom: 100px; }
 .mtop25 { margin-top: 25px; }
