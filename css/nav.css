@@ -124,4 +124,5 @@ nav svg:hover, #burger-menu > div svg:hover { transform: scale(1.1); cursor: poi
     #burger-menu-overlay { display: block; }
     #open-burger-menu-icon-top { display: block; }
     #open-burger-menu-icon-header-container { display: flex; }
+    #logo-mobile { display: flex; }
 }

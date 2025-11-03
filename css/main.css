@@ -20,6 +20,10 @@
 body { background-color: var(--primary-color); }
 h1, h2, h3, h4, h5, h6, p { color: var(--accent-txt); }
 
+.body-scroll {
+    overflow-y: hidden;
+}
+
 /* logo */
 .logo img {
     transition: transform 0.3s ease;

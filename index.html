@@ -20,7 +20,10 @@
     <div 
         class="overlay" 
         id="burger-menu-overlay"
-        onclick="document.getElementById('burger-menu-overlay').classList.remove('active')"
+        onclick="
+            document.body.classList.remove('body-scroll')
+            document.getElementById('burger-menu-overlay').classList.remove('active')
+        "
     >
         <div id="burger-menu" onclick="event.stopPropagation()">
             <div>
@@ -29,7 +32,10 @@
                     width="35" height="35" viewBox="0 0 24 24" 
                     fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    onclick="document.getElementById('burger-menu-overlay').classList.remove('active')"
+                    onclick="
+                        document.body.classList.remove('body-scroll')
+                        document.getElementById('burger-menu-overlay').classList.remove('active')
+                    "
                 >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M18 6l-12 12" />
@@ -38,10 +44,22 @@
             </div>  
 
             <div class="flex-cols" id="burger-links">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="./contact.html">Contact</a>
+                <a href="#about" onclick="
+                    document.body.classList.remove('body-scroll')
+                    document.getElementById('burger-menu-overlay').classList.remove('active')
+                ">About</a>
+                <a href="#services" onclick="
+                    document.body.classList.remove('body-scroll')
+                    document.getElementById('burger-menu-overlay').classList.remove('active')
+                ">Services</a>
+                <a href="#testimonials" onclick="
+                    document.body.classList.remove('body-scroll')
+                    document.getElementById('burger-menu-overlay').classList.remove('active')
+                ">Testimonials</a>
+                <a href="./contact.html" onclick="
+                    document.body.classList.remove('body-scroll')
+                    document.getElementById('burger-menu-overlay').classList.remove('active')
+                ">Contact</a>
             </div>
         </div>
     </div>
@@ -69,7 +87,10 @@
                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     id="open-burger-menu-icon-top"
-                    onclick="document.getElementById('burger-menu-overlay').classList.add('active')"
+                    onclick="
+                        document.body.classList.add('body-scroll')
+                        document.getElementById('burger-menu-overlay').classList.add('active')
+                    "
                 >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M4 8l16 0" />
@@ -82,10 +103,15 @@
         </div>
     </div>
     <nav id="nav">
-        <a href="#about">About</a>
+        <a href="#about" onclick="">About</a>
         <a href="#services">Services</a>
         <a href="#testimonials">Testimonials</a>
         <a href="./contact.html">Contact</a>
+
+        <!-- Logo on mobile header -->
+        <div class="logo mleft25 flex-cols flex-grow flex-center-justify" id="logo-mobile">
+            <img src="./images/jrc-logo.png" class="saturate">
+        </div>
 
         <!-- Icon to open burger menu -->
         <div class="flex-cols flex-center-justify" id="open-burger-menu-icon-header-container">
@@ -95,7 +121,10 @@
                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 id="open-burger-menu-icon-header"
-                onclick="document.getElementById('burger-menu-overlay').classList.add('active')"
+                onclick="
+                    document.body.classList.add('body-scroll')
+                    document.getElementById('burger-menu-overlay').classList.add('active')
+                "
             >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M4 8l16 0" />
