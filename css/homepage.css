@@ -1,14 +1,9 @@
 .banner {
+    width: 100%;
     flex-grow: 1;
     background-image: url('../images/landing-banner-hires-compressed.jpg');
     background-size: cover;
-    background-position: left 0% top 15%;
-}
-#logo-mobile { 
-    display: none; 
-}
-#logo-mobile img {
-    transform: scale(120%);
+    background-position: center top; /* or 50% 15% */
 }
 .logo {
     width: 175px;
@@ -16,7 +11,7 @@
     aspect-ratio: 1 / 1;
 }
 .logo img {
-    width: 50px;
+    width: 100%;
     box-sizing: content-box;
     object-fit: contain;
     display: block;

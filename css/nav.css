@@ -125,4 +125,13 @@ nav svg:hover, #burger-menu > div svg:hover { transform: scale(1.1); cursor: poi
     #open-burger-menu-icon-top { display: block; }
     #open-burger-menu-icon-header-container { display: flex; }
     #logo-mobile { display: flex; }
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: var(--primary-color);
+        box-shadow: 0px 0px 5px black;
+    }
+    .nav-homepage { display: none; }
 }
