@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/homepage.css">
     <link rel="stylesheet" href="./css/bulletlist.css">
     <link rel="stylesheet" href="./css/testimonials.css">
     <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/linkedinbadge.css">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
     <!-- font -->
@@ -144,30 +146,58 @@
 
             <h1 class="t-normal t40 ls1 t-bold mtop75 mbottom50" id="title">Education & Work Experience</h1>
 
-            <h4 class="t-normal ls1 mbottom5">B.A. Psychology</h4>
-            <p class="mbottom25 ls1 t14 t-italic">Carleton College</p>
+            <div class="edu-layout">
+              <!-- LEFT: your existing entries, unchanged -->
+              <div class="edu-entries">
+                <h4 class="t-normal ls1 mbottom5">B.A. Psychology</h4>
+                <p class="mbottom25 ls1 t14 t-italic">Carleton College</p>
 
-            <h4 class="t-normal ls1 mbottom5">Ed.S. School Psychological Services</h4>
-            <p class="mbottom25 ls1 t14 t-italic">University of Minnesota, Twin Cities</p>
+                <h4 class="t-normal ls1 mbottom5">Ed.S. School Psychological Services</h4>
+                <p class="mbottom25 ls1 t14 t-italic">University of Minnesota, Twin Cities</p>
 
-            <h4 class="t-normal ls1 mbottom5">Ed.S. Leadership For Educational Organizations</h4>
-            <p class="mbottom25 ls1 t14 t-italic">University of Colorado, Denver</p>
+                <h4 class="t-normal ls1 mbottom5">Ed.S. Leadership For Educational Organizations</h4>
+                <p class="mbottom25 ls1 t14 t-italic">University of Colorado, Denver</p>
 
-            <h4 class="t-normal ls1 mbottom5">Wyatt Academy</h4>
-            <p class="mbottom25 ls1 t14 t-italic">Colorado Charter School</p>
+                <h4 class="t-normal ls1 mbottom5">Wyatt Academy</h4>
+                <p class="mbottom25 ls1 t14 t-italic">Colorado Charter School</p>
 
-            <h4 class="t-normal ls1 mbottom5">Cherry Creek Schools</h4>
-            <p class="mbottom25 ls1 t14 t-italic">Colorado Public District</p>
+                <h4 class="t-normal ls1 mbottom5">Cherry Creek Schools</h4>
+                <p class="mbottom25 ls1 t14 t-italic">Colorado Public District</p>
 
-            <h4 class="t-normal ls1 mbottom5">Montessori School of Denver</h4>
-            <p class="mbottom25 ls1 t14 t-italic">Colorado Private School</p>
+                <h4 class="t-normal ls1 mbottom5">Montessori School of Denver</h4>
+                <p class="mbottom25 ls1 t14 t-italic">Colorado Private School</p>
 
-            <h4 class="t-normal ls1 mbottom5">Osseo Area Schools</h4>
-            <p class="mbottom25 ls1 t14 t-italic">Minnesota Public District</p>
+                <h4 class="t-normal ls1 mbottom5">Osseo Area Schools</h4>
+                <p class="mbottom25 ls1 t14 t-italic">Minnesota Public District</p>
 
-            <h4 class="t-normal ls1 mbottom25">Colorado Diversity Network of ACIS Schools</h4>
+                <h4 class="t-normal ls1 mbottom25">Colorado Diversity Network of ACIS Schools</h4>
 
-            <h4 class="t-normal ls1">Colorado Psychology Association Racial Justice Task Force</h4>
+                <h4 class="t-normal ls1">Colorado Psychology Association Racial Justice Task Force</h4>
+              </div>
+
+              <!-- RIGHT: the badge (snaps below on narrow screens) -->
+              <div class="edu-badge">
+                <p class="li-badge-eyebrow">Connect on LinkedIn</p>
+                <div class="li-badge">
+                  <div class="li-badge__banner">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                    <span class="li-badge__wordmark">LinkedIn</span>
+                  </div>
+                  <div class="li-badge__body">
+                    <img class="li-badge__avatar" src="https://media.licdn.com/dms/image/v2/D5603AQGIaYF5Obv8gw/profile-displayphoto-crop_800_800/B56Z7G1D8.GsAI-/0/1781452262584?e=1783555200&v=beta&t=ADypLpox5aA3XCmazT8ewV74l_5vbjC9cQvXcAmH-Lo" alt="Joo Ree Chu">
+                    <!-- no photo yet? use: <span class="li-badge__avatar">JC</span> -->
+                    <p class="li-badge__name"><a href="https://www.linkedin.com/in/jooreechu/" target="_blank" rel="noopener">Joo Ree Chu, Ed.S.</a></p>
+                    <p class="li-badge__headline">School Psychologist · Educational Consultant</p>
+                    <a class="li-badge__cta" href="https://www.linkedin.com/in/jooreechu/" target="_blank" rel="noopener">View profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="para mtop75 t18" style="color: var(--accent-txt)">
+                Joo Ree is an actively practicing School Psychologist and enjoys facilitating shadow experiences for students who are interested in 
+                the profession. She also facilitates professional development workshops for nonprofit educational organizations.
+            </p>
 
             <p class="para mtop75 t18" style="color: var(--accent-txt)">
                 Joo Ree is an actively practicing School Psychologist and enjoys facilitating shadow experiences for students who are interested in 
