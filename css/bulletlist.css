@@ -5,21 +5,43 @@
 
 .bullet-item {
     margin-bottom: 12px;
-    border-radius: 6px;
+    border-radius: 8px;
+    border-left: 4px solid transparent;
+    background: #efebf3;
     overflow: hidden;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .bullet-item:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+.bullet-item.active {
+    border-left-color: #f1c40f;
+    box-shadow: 0 6px 18px rgba(45, 17, 92, 0.1);
+}
+
 .bullet-header {
     display: flex;
     align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 16px 18px;
+    background: none;
+    border: none;
+    font: inherit;
+    text-align: left;
+    color: inherit;
+}
+
+button.bullet-header {
     cursor: pointer;
-    padding: 14px 18px;
-    background: #efebf3;
+}
+
+button.bullet-header:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: -2px;
+    border-radius: 8px;
 }
 
 .bullet-dot {
@@ -28,39 +50,88 @@
     min-width: 14px;
     border-radius: 50%;
     background-color: #f1c40f;
-    margin-right: 12px;
     transition: transform 0.3s ease;
 }
 
 .bullet-title {
     font-size: 1.1rem;
     font-weight: 600;
-    margin-top: 5px;
-    color: #2c3e50;
+    line-height: 1.4;
+    color: var(--dark-txt);
+}
+
+.bullet-title em {
+    font-weight: 700;
+}
+
+.bullet-tag {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #f1c40f;
+    color: var(--accent-txt);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
     margin-left: auto;
-    color: #f1c40f;
-    transition: transform 0.3s ease;
-    font-size: 25px;
+    border-radius: 50%;
+    color: #d4a80c;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bullet-header:hover .arrow {
+    background-color: rgba(241, 196, 15, 0.15);
 }
 
 .bullet-content {
-    max-height: 0;
-    overflow: auto;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+}
+
+.bullet-body {
+    min-height: 0;
     overflow: hidden;
-    background: #efebf3;
+    visibility: hidden;
+    padding: 0 18px 0 46px;
     color: #555;
     font-size: 0.95rem;
-    line-height: 1.5;
-    padding: 0 18px;
-    transition: max-height 0.4s ease, padding 0.4s ease;
+    line-height: 1.6;
+    transition: padding 0.35s ease, visibility 0.35s;
+}
+
+.bullet-body ul {
+    margin-top: 10px;
+    padding-left: 18px;
+    list-style: disc;
+}
+
+.bullet-body li {
+    margin-bottom: 6px;
+}
+
+.bullet-body li::marker {
+    color: #d4a80c;
 }
 
 .bullet-item.active .bullet-content {
-    max-height: 1000px;
-    padding: 14px 18px;
+    grid-template-rows: 1fr;
+}
+
+.bullet-item.active .bullet-body {
+    visibility: visible;
+    padding-bottom: 18px;
 }
 
 .bullet-item.active .arrow {
@@ -69,4 +140,16 @@
 
 .bullet-item.active .bullet-dot {
     transform: scale(1.3);
+}
+
+@media screen and (max-width: 750px) {
+    .bullet-header { padding: 14px; gap: 12px; }
+    .bullet-title { font-size: 1rem; }
+    .bullet-body { padding-left: 14px; padding-right: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bullet-item, .bullet-dot, .arrow, .bullet-content, .bullet-body {
+        transition: none;
+    }
 }
